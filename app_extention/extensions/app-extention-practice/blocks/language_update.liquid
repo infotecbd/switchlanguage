@@ -1,0 +1,26 @@
+
+
+
+
+
+
+  
+  <script>
+    document.getElementById('language-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      var selectedLanguage = document.getElementById('language-selector').value;
+      this.action = this.action + '?language=' + selectedLanguage;
+      this.submit();
+    });
+  </script>
+
+{% schema %}
+{
+  "name": "app_extention",
+  "target": "section",
+  "settings": [
+    { "type": "product", "id": "product", "label": "product", "autofill": true },
+    { "type": "color", "id": "colour", "label": "Star Colour", "default": "#ff0000" }
+  ]
+}
+{% endschema %}
